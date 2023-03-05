@@ -50,7 +50,8 @@ public class AggregateFunctionsActivity {
          * Problem 1: use the SUM() aggregate function to output the total of all salaries found in the table.
          * Note: the output should not contain any other info but the sum.
          */
-        String sql = FileUtil.parseSQLFile("problem1.sql");
+        //String sql = FileUtil.parseSQLFile("problem1.sql");
+        String sql = "SELECT sum(salary) FROM employee; ";
 
         double average = 0.0;
         try {
@@ -73,8 +74,8 @@ public class AggregateFunctionsActivity {
          * Problem 2: use the COUNT() aggregate function to output the number of employees with the last name "Smith".
          * Note: the output should not contain any other info but the count.
          */
-        String sql = FileUtil.parseSQLFile("problem2.sql");
-
+        //String sql = FileUtil.parseSQLFile("problem2.sql");
+        String sql = "SELECT DISTINCT COUNT(last_name) FROM employee WHERE last_name = 'Smith' group by last_name; ";
 
         int count = 0;
         try {
@@ -98,8 +99,8 @@ public class AggregateFunctionsActivity {
          * Problem 3: use the MIN() aggregate function to return the lowest salary.
          * Note: the output should not contain any other info but the salary.
          */
-        String sql = FileUtil.parseSQLFile("problem3.sql");
-
+        //String sql = FileUtil.parseSQLFile("problem3.sql");
+        String sql = "SELECT MIN(salary) from employee; ";
 
         double minimum = 0.0;
         try {
@@ -122,8 +123,8 @@ public class AggregateFunctionsActivity {
          * Problem 4: use the MAX() aggregate function to return the highest salary.
          * Note: the output should not contain any other info but the salary.
          */
-        String sql = FileUtil.parseSQLFile("problem4.sql");
-
+        //String sql = FileUtil.parseSQLFile("problem4.sql");
+        String sql = "SELECT MAX(salary) FROM employee; ";
 
         double maximum = 0.0;
         try {
